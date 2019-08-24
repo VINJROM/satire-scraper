@@ -1,12 +1,8 @@
-# NYT-Mongo-Scraper
-This is a Node.js application that utilizes Cheerio and a MongoDB back-end to scrape and save NYT articles to a Bootstrap UI.
+# Onion-Scraper
+This is a Node.js application that utilizes Cheerio and a MongoDB back-end to scrape and save The Onion articles to a Bootstrap UI.
 
 ## Feature Overview
-Scrape the New York Times homepage, then save and add notes to your favorite articles using this responsive application.
-
-![NYT Scape Demo](public/assets/images/app_demo.gif "NYT Mongo Scraper Demo")
-
-For a live example, see a deployed version to Heroku at [https://nyt-mongoscraper-ss.herokuapp.com/](https://nyt-mongoscraper-ss.herokuapp.com/ "deployed example")
+Scrape The Onion homepage, then save and add notes to your favorite articles using this responsive application.
 
 ## Downloading This Application
 To use this application:
@@ -15,7 +11,7 @@ To use this application:
 
 2. Next, clone this repo to your local machine:
 ```
-git clone git@github.com:stoversa/NYT-Mongo-Scraper.git
+git clone git@github.com:vinjrom/onion-scraper.git
 ```
 3. Open the repo and execute the following in the bash terminal. Doing so should install the application's dependencies:
 ```
