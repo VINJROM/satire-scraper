@@ -14,31 +14,29 @@ router.get("/scrape", (req, res) => {
             const $ = cheerio.load(body);
             let count = 0;
             // Now, we grab every article:
-            $('article').each(function (i, element) {
+            $('article.js_post_item').each(function (i, element) {
                 // Save an empty result object
                 let count = i;
                 let result = {};
                 // Add the text and href of every link, and summary and byline, saving them to object
                 result.title = $(element)
-                    .children('.story-heading')
-                    .children('a')
+                    .find('a.js_link')
+                    .children('h1')
                     .text().trim();
+                    
                 result.link = $(element)
-                    .children('.story-heading')
+                    .find('.cw4lnv-5')
                     .children('a')
                     .attr("href");
-                result.summary = $(element)
-                    .children('.summary')
-                    .text().trim()
-                    || $(element)
-                        .children('ul')
-                        .text().trim();
-                result.byline = $(element)
-                    .children('.byline')
-                    .text().trim()
-                    || 'No byline available'
-                
-                if (result.title && result.link && result.summary){
+
+                result.img = $(element)
+                    .find('div.dv4r5q-3')
+                    .children('img')
+                    .attr('srcset')
+
+            console.log(result.img);    
+
+                if (result.title && result.link){
                     // Create a new Article using the `result` object built from scraping, but only if both values are present
                     db.Article.create(result)
                         .then(function (dbArticle) {

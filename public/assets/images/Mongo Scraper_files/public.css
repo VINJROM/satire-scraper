@@ -1,9 +1,11 @@
 .background-image{
-    /* background-image: url("../images/theonion.jpg"); */
-    background-color: transparent;
-    height: 150px;
-    /* background-repeat: no-repeat; */
+    background-image: url("../images/onion_bg.jpeg");
+    background-size: 100%;
+    background-repeat: round;
 }
+
+
+    
 
 @media (min-width: 1px) {
     .display-1 {

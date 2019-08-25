@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="NYT Scraper Using MongoDB">
+    <meta name="keywords" content="NYT,MongoDB">
+    <meta name="author" content="Sam Stover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://localhost:3000/assets/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="http://localhost:3000/assets/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://localhost:3000/assets/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://localhost:3000/assets/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://localhost:3000/assets/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://localhost:3000/assets/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://localhost:3000/assets/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://localhost:3000/assets/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:3000/assets/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:3000/assets/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:3000/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="http://localhost:3000/assets/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:3000/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="http://localhost:3000/assets/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#dc3545">
+    <meta name="msapplication-TileImage" content="./assets/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#dc3545">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./Mongo Scraper_files/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Mongo Scraper_files/public.css">
+    <title>Mongo Scraper</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="http://localhost:3000/">Mongo Scraper</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="http://localhost:3000/">Home
+                <span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-item nav-link" href="http://localhost:3000/saved">Saved Articles</a>
+            <a href="http://localhost:3000/scrape" class="btn btn-danger active" role="button" aria-pressed="true">Scrape The Onion</a>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+        <div class="background-image">
+        </div>
+            <div class="overlay">
+                <div class="caption">
+                    <h1 class="display-1 text-black">Mongo Scraper</h1>
+                    <h2 class="text-black">The Onion Edition</h2>
+                </div>
+            </div>
+
+
+    <div class="row">
+        <div class="col-12">
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://politics.theonion.com/aides-struggle-to-stop-dozens-of-kerosene-soaked-republ-1837517131" target="_blank" class="text-white">
+                            <h2>Aides Struggle To Stop Dozens Of Kerosene-Soaked Republicans From Lighting Selves Ablaze Atop David Koch’s Body</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce63" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://local.theonion.com/every-ingredient-in-recipe-substituted-to-avoid-trip-to-1837515747" target="_blank" class="text-white">
+                            <h2>Every Ingredient In Recipe Substituted To Avoid Trip To Store</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce64" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://www.theonion.com/bernie-sanders-launches-16-trillion-climate-plan-1837515504" target="_blank" class="text-white">
+                            <h2>Bernie Sanders Launches $16 Trillion Climate Plan</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce65" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://www.theonion.com/impact-of-the-massive-fires-in-the-amazon-rainforest-1837511869" target="_blank" class="text-white">
+                            <h2>Impact Of The Massive Fires In The Amazon Rainforest</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce66" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://www.theonion.com/disneyland-employee-hastily-ad-libs-story-about-how-muc-1837511032" target="_blank" class="text-white">
+                            <h2>Disneyland Employee Hastily Ad-Libs Story About How Much Goofy Loves Napping On The Pavement</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce67" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://sports.theonion.com/kid-only-pitcher-because-he-s-son-of-coach-gets-daily-1837506513" target="_blank" class="text-white">
+                            <h2>Kid Only Pitcher Because He’s Son Of Coach, Gets Daily One-On-One Training, Goes To Pitching Camp Every Summer</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce68" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://local.theonion.com/idiot-walking-around-with-fly-open-1837506409" target="_blank" class="text-white">
+                            <h2>Idiot Walking Around With Fly Open</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce69" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://local.theonion.com/christmas-obsessed-woman-worships-christ-year-round-1837506283" target="_blank" class="text-white">
+                            <h2>Christmas-Obsessed Woman Worships Christ Year-Round</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce6a" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://ogn.theonion.com/interview-we-imprison-hideo-kojima-in-an-interview-roo-1837506102" target="_blank" class="text-white">
+                            <h2>We Imprison Hideo Kojima In An Interview Room Until He Breaks Down And Admits He’s Just Making Shit Up As He Goes Along</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce6b" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://sports.theonion.com/derek-carr-distraught-after-reading-hard-knocks-scrip-1837505837" target="_blank" class="text-white">
+                            <h2>Derek Carr Distraught After Reading ‘Hard Knocks’ Script Where He Stabs Antonio Brown In Season Finale</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce6c" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://www.theonion.com/pros-and-cons-of-tax-exemptions-for-religious-instituti-1837505670" target="_blank" class="text-white">
+                            <h2>Pros And Cons Of Tax Exemptions For Religious Institutions</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce6d" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://local.theonion.com/man-who-s-about-to-cry-bursts-out-of-crowded-room-like-1837505445" target="_blank" class="text-white">
+                            <h2>Man Who’s About To Cry Bursts Out Of Crowded Room Like He’s Transforming Into A Werewolf</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce6e" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://www.theonion.com/poll-half-of-trump-voters-would-blame-him-for-recessio-1837505264" target="_blank" class="text-white">
+                            <h2>Poll: Half Of Trump Voters Would Blame Him For Recession</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce6f" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://sports.theonion.com/derek-jeter-just-going-to-go-ahead-and-count-stray-cats-1837485148" target="_blank" class="text-white">
+                            <h2>Derek Jeter Just Going To Go Ahead And Count Stray Cats In Marlins Attendance Figure</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce70" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://www.theonion.com/new-trump-policy-would-permit-indefinite-detention-of-m-1837481210" target="_blank" class="text-white">
+                            <h2>New Trump Policy Would Permit Indefinite Detention Of Migrant Families</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce71" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+                <div class="card w-90">
+                    <div class="card-header text-white bg-primary">
+                        <a href="https://www.theonion.com/report-finds-majority-of-freeway-accidents-could-have-e-1837478785" target="_blank" class="text-white">
+                            <h2>Report Finds Majority Of Freeway Accidents Could Have Easily Been Filmed</h2>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                        </p>
+                        <button id="5d62c20bdf47b208693cce72" class="btn btn-primary save-btn">Save Article</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <!-- JavaScript -->
+    <script src="./Mongo Scraper_files/jquery-3.2.1.min.js"></script>
+    <script src="./Mongo Scraper_files/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./Mongo Scraper_files/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./Mongo Scraper_files/public.js"></script>
+
+
+</body></html>
