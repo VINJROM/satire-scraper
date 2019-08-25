@@ -1,8 +1,8 @@
 .background-image{
-    /* background-image: url("../images/theonion.jpg"); */
-    background-color: transparent;
-    height: 150px;
-    /* background-repeat: no-repeat; */
+    background-color: red;
+    background-image: url("../images/newspaper.jpg");
+    color: rgb(127, 255, 110);
+    
 }
 
 @media (min-width: 1px) {
