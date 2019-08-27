@@ -23,9 +23,6 @@
                 </div>
             </div>
             </div>
-
-
-
     <div class=row>
         <div class="col-12">
             {{#if articles}}
@@ -35,11 +32,13 @@
                         <a href={{link}} target="_blank" class="text-white">
                             <h2>{{title}}</h2>
                         </a>
+                        {{!-- Images will display here --}}
+                        <img src = {{image}}>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">
+                        {{!-- <p class="card-text">
                             {{summary}}
-                        </p>
+                        </p> --}}
                         <button id="{{_id}}" class="btn btn-primary save-btn">Save Article</button>
                     </div>
                 </div>
