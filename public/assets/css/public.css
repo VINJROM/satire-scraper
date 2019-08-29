@@ -5,6 +5,11 @@
     
 }
 
+img{
+height: 100%;
+}
+
+
 @media (min-width: 1px) {
     .display-1 {
         font-size: 4rem

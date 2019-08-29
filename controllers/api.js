@@ -21,7 +21,7 @@ router.get("/scrape", (req, res) => {
 
         // This is the base url for all images
         const photoEndpoint =
-          "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_180,q_80,w_320/";
+          "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_900,q_80,w_1600/";
 
         // Add the text and href of every link, and summary and byline, saving them to object
         result.title = $(element)
@@ -38,27 +38,19 @@ router.get("/scrape", (req, res) => {
         // Inside the <img> tag I see that the name of the image is in the 'data-comp-id' attribute
         let photoID = $(element)
           .find("figure")
-
           .find("img")
-
           .attr("data-chomp-id");
 
         // Putting them together builds our photo src url
         result.photo = photoEndpoint + photoID + ".jpg";
 
+        console.log(result);
 
-        console.log(result.photo);
-
-        if (result.title && result.link) {
+        if (result.title && result.link && result.photo) {
           // Create a new Article using the `result` object built from scraping, but only if both values are present
           db.Article.create(result)
-            .then(function(dbArticle) {
-              // View the added result in the console
-              count++;
-            })
+            .then(function(dbArticle){})
             .catch(function(err) {
-              // If an error occurred, send it to the client
-              return res.json(err);
             });
         }
       });

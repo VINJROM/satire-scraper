@@ -2,6 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
+// 
 var ArticleSchema = new Schema({
 
   title: {
@@ -16,23 +17,23 @@ var ArticleSchema = new Schema({
     unique: true
   },
 
-  image: {
+  photo: {
     type: String,
     required: false,
     unique: false
   },
 
-  summary: {
-    type: String,
-    required: false,
-    unique: false
-  },
+  // summary: {
+  //   type: String,
+  //   required: false,
+  //   unique: false
+  // },
 
-  byline: {
-    type: String,
-    required: false,
-    unique: false
-  },
+  // byline: {
+  //   type: String,
+  //   required: false,
+  //   unique: false
+  // },
 
   isSaved: {
     type: Boolean,
