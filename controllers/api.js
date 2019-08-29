@@ -51,6 +51,8 @@ router.get("/scrape", (req, res) => {
           db.Article.create(result)
             .then(function(dbArticle){})
             .catch(function(err) {
+              // If an error occurred, send it to the client
+              console.log(err);
             });
         }
       });
