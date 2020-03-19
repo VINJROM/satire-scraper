@@ -1,5 +1,5 @@
-# Onion-Scraper
-This is a Node.js application that utilizes Cheerio and a MongoDB back-end to scrape and save The Onion articles to a Bootstrap UI.
+# Satire-Scraper
+This is a Node.js application that utilizes Cheerio and a MongoDB back-end to scrape and save The Onion to a Bootstrap UI.
 
 ## Feature Overview
 Scrape The Onion homepage, then save and add notes to your favorite articles using this responsive application.
