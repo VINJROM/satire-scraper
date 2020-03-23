@@ -11,7 +11,7 @@ To use this application:
 
 2. Next, clone this repo to your local machine:
 ```
-git clone git@github.com:vinjrom/onion-scraper.git
+git clone git@github.com:vinjrom/satire-scraper.git
 ```
 3. Open the repo and execute the following in the bash terminal. Doing so should install the application's dependencies:
 ```
